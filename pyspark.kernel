@@ -12,7 +12,7 @@
     "PYTHONPATH": "/opt/spark/python/:/opt/spark/python/lib/py4j-0.8.2.1-src.zip",
     "PYTHONSTARTUP": "/opt/spark/python/pyspark/shell.py",
     "HADOOP_HOME": "/opt/spark",
-    "HADOOP_CONF_DIR": "/tmp/jupyterhub",
+    "HADOOP_CONF_DIR": "/opt/hadoop/etc/hadoop",
     "SPARK_HOME": "/opt/spark",
     "SPARK_LOCAL_DIRS": "/tmp/spark/local",
     "PYSPARK_SUBMIT_ARGS": "--master yarn-client pyspark-shell"

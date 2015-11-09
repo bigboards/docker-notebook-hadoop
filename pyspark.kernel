@@ -1,0 +1,20 @@
+{
+  "display_name": "pySpark (Spark 1.4.1)",
+  "language": "python",
+  "argv": [
+    "/usr/bin/python2",
+    "-m",
+    "IPython.kernel",
+    "-f",
+    "{connection_file}"
+  ],
+  "env": {
+    "PYTHONPATH": "/opt/spark/python/:/opt/spark/python/lib/py4j-0.8.2.1-src.zip",
+    "PYTHONSTARTUP": "/opt/spark/python/pyspark/shell.py",
+    "HADOOP_HOME": "/opt/spark",
+    "HADOOP_CONF_DIR": "/tmp/jupyterhub",
+    "SPARK_HOME": "/opt/spark",
+    "SPARK_LOCAL_DIRS": "/tmp/spark/local",
+    "PYSPARK_SUBMIT_ARGS": "--master yarn-client pyspark-shell"
+  }
+}

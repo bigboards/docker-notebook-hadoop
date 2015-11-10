@@ -64,6 +64,9 @@ ENV SQOOP_HOME /opt/sqoop
 ENV PIG_HOME /opt/pig
 ENV PATH ${PATH}:${PIG_HOME}/bin:${SQOOP_HOME}/bin:${HADOOP_HOME}/bin
 
+ADD hadoop-shell /bin/hadoop-shell
+RUN chmod a+x /bin/hadoop-shell
+
 WORKDIR /srv/jupyterhub/
 
 EXPOSE 8000

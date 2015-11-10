@@ -35,6 +35,12 @@ RUN cd /opt && \
     ln -s ./pig-0.15.0 pig && \
     ln -s ./sqoop-1.4.6.bin__hadoop-2.0.4-alpha sqoop
 
+
+###############################################################################
+## PIG EXTENSION LIBS 
+###############################################################################
+RUN wget -O /opt/pig/lib/parquet-pig-bundle-1.8.1.jar http://search.maven.org/remotecontent?filepath=org/apache/parquet/parquet-pig-bundle/1.8.1/parquet-pig-bundle-1.8.1.jar 
+
 ###############################################################################
 ## SQOOP JDBC DRIVERS
 ###############################################################################

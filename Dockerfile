@@ -10,9 +10,6 @@ RUN cd /opt && ln -s ./spark-1.4.1-bin-hadoop2.6 spark
 RUN mkdir /usr/local/share/jupyter/kernels/pyspark
 ADD pyspark.kernel /usr/local/share/jupyter/kernels/pyspark/kernel.json
 
-# Add the bash kernel
-RUN pip install bash_kernel && python -m bash_kernel.install
-
 # Install Java.
 RUN \
   echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \

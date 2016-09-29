@@ -9,11 +9,11 @@
     "{connection_file}"
   ],
   "env": {
-    "PYTHONPATH": "/opt/spark/python/:/opt/spark/python/lib/py4j-0.8.2.1-src.zip",
+    "PYTHONPATH": "/opt/spark/python/:/opt/spark/python/lib/py4j-0.9-src.zip",
     "PYTHONSTARTUP": "/opt/spark/python/pyspark/shell.py",
-    "HADOOP_HOME": "/opt/spark",
+    "HADOOP_HOME": "/opt/spark/",
     "HADOOP_CONF_DIR": "/opt/hadoop/etc/hadoop",
-    "SPARK_HOME": "/opt/spark",
+    "SPARK_HOME": "/opt/spark/",
     "SPARK_LOCAL_DIRS": "/tmp/spark/local",
     "PYSPARK_SUBMIT_ARGS": "--master yarn-client --packages com.databricks:spark-csv_2.11:1.2.0,com.github.shse:spark-es_2.10:1.0.4 pyspark-shell"
   }

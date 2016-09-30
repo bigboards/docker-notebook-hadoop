@@ -9,7 +9,7 @@ RUN cd /opt && ln -s ./spark-1.6.2-bin-hadoop2.6 spark
 
 RUN mkdir /usr/local/share/jupyter/kernels/pyspark
 ADD pyspark.kernel /usr/local/share/jupyter/kernels/pyspark/kernel.json
-RUN mkdir /tmp/spark/local
+RUN mkdir -p /tmp/spark/local && chmod -R 777 /tmp/spark
 
 # Install Java.
 RUN \

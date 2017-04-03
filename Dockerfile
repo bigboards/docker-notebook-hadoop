@@ -28,7 +28,7 @@ RUN apt-get update \
 ###############################################################################
 ## DOWNLOAD Hadoop, Sqoop, Pig
 ###############################################################################
-RUN curl -s http://www.eu.apache.org/dist/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz | tar -xz -C /opt
+RUN curl -s https://archive.apache.org/dist/hadoop/core/hadoop-2.6.0/hadoop-2.6.0.tar.gz | tar -xz -C /opt
 RUN curl -s http://www.eu.apache.org/dist/pig/pig-0.15.0/pig-0.15.0.tar.gz | tar -xz -C /opt
 RUN curl -s http://www.apache.org/dist/sqoop/1.4.6/sqoop-1.4.6.bin__hadoop-2.0.4-alpha.tar.gz | tar -xz -C /opt
 

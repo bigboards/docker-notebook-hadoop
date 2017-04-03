@@ -4,8 +4,8 @@ MAINTAINER bigboards <hello@bigboards.io>
 
 RUN echo 'bb:Swh^bdl' | chpasswd
 
-RUN curl -s http://d3kbcqa49mib13.cloudfront.net/spark-1.6.2-bin-hadoop2.6.tgz | tar -xz -C /opt
-RUN cd /opt && ln -s ./spark-1.6.2-bin-hadoop2.6 spark
+RUN curl -s http://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.6.tgz | tar -xz -C /opt
+RUN cd /opt && ln -s ./spark-2.1.0-bin-hadoop2.6 spark
 
 RUN mkdir /usr/local/share/jupyter/kernels/pyspark
 ADD pyspark.kernel /usr/local/share/jupyter/kernels/pyspark/kernel.json
@@ -23,7 +23,7 @@ RUN \
 # Install libraries
 RUN apt-get update \
     && apt-get install -y build-essential gfortran libatlas-base-dev python-pip python-dev pkg-config libpng-dev libjpeg8-dev libfreetype6-dev \
-&& yes | pip install --upgrade pip numpy scipy pandas scikit-learn matplotlib
+&& yes | pip install --upgrade pip numpy scipy pandas scikit-learn matplotlib sparkts
 
 ###############################################################################
 ## DOWNLOAD Hadoop, Sqoop, Pig

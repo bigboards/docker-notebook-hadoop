@@ -1,5 +1,5 @@
 {
-  "display_name": "pySpark (Spark 1.6.2)",
+  "display_name": "pySpark (Spark 2.1.0)",
   "language": "python",
   "argv": [
     "/usr/bin/python2",
@@ -15,6 +15,6 @@
     "HADOOP_CONF_DIR": "/opt/hadoop/etc/hadoop",
     "SPARK_HOME": "/opt/spark/",
     "SPARK_LOCAL_DIRS": "/tmp/jupyterhub/spark/local",
-    "PYSPARK_SUBMIT_ARGS": "--master yarn-client --packages com.databricks:spark-csv_2.11:1.2.0,com.github.shse:spark-es_2.10:1.0.4 pyspark-shell"
+    "PYSPARK_SUBMIT_ARGS": "--master yarn --deploy-mode client --packages com.cloudera.sparkts:sparkts:0.4.1,com.github.shse:spark-es_2.10:1.0.7 pyspark-shell"
   }
 }

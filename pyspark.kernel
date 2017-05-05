@@ -9,7 +9,7 @@
     "{connection_file}"
   ],
   "env": {
-    "PYTHONPATH": "/opt/spark/python/:/opt/spark/python/lib/py4j-0.9-src.zip",
+    "PYTHONPATH": "/opt/spark/python/:/opt/spark/python/lib/py4j-0.10.4-src.zip",
     "PYTHONSTARTUP": "/opt/spark/python/pyspark/shell.py",
     "HADOOP_HOME": "/opt/spark/",
     "HADOOP_CONF_DIR": "/opt/hadoop/etc/hadoop",

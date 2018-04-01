@@ -59,7 +59,7 @@ RUN wget -P /tmp/ http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector
 RUN mkdir -p /tmp/jupyterhub/spark/local && chmod 777 /tmp/jupyterhub/spark/local
 
 # Set the environment variables
-ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
+ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 ENV HADOOP_HOME /opt/hadoop
 ENV HADOOP_PREFIX /opt/hadoop
 ENV HADOOP_YARN_HOME /opt/hadoop

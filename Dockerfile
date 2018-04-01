@@ -1,4 +1,4 @@
-FROM bigboards/jupyterhub-x86_64
+FROM bigboards/jupyterhub-__arch__
 
 MAINTAINER bigboards <hello@bigboards.io>
 

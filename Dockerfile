@@ -1,4 +1,4 @@
-FROM bigboards/jupyterhub-__arch__
+FROM bigboards/jupyterhub-x86_64
 
 MAINTAINER bigboards <hello@bigboards.io>
 
@@ -12,12 +12,12 @@ ADD pyspark.kernel /usr/local/share/jupyter/kernels/pyspark/kernel.json
 
 # Install Java.
 RUN \
-  echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
   apt-get update && \
   apt-get install -y software-properties-common && \
   add-apt-repository -y ppa:webupd8team/java && \
   apt-get update && \
-  apt-get install -y oracle-java7-installer && \
+  apt-get install -y oracle-java8-installer && \
   pip3 install jupyter-console
   
 # Install libraries

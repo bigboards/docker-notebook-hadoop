@@ -26,16 +26,18 @@ RUN apt-get update \
 && yes | pip install --upgrade pip numpy scipy pandas scikit-learn matplotlib sparkts
 
 ###############################################################################
-## DOWNLOAD Hadoop, Sqoop, Pig
+## DOWNLOAD Hadoop, Sqoop, Pig, Hive
 ###############################################################################
 RUN curl -s https://archive.apache.org/dist/hadoop/core/hadoop-2.6.0/hadoop-2.6.0.tar.gz | tar -xz -C /opt
 RUN curl -s http://www.eu.apache.org/dist/pig/pig-0.15.0/pig-0.15.0.tar.gz | tar -xz -C /opt
 RUN curl -s http://www.apache.org/dist/sqoop/1.4.6/sqoop-1.4.6.bin__hadoop-2.0.4-alpha.tar.gz | tar -xz -C /opt
+RUN curl -s http://archive.apache.org/dist/hive/hive-2.3.2/apache-hive-2.3.2-bin.tar.gz | tar -xz -C /opt
 
 RUN cd /opt && \
     ln -s ./hadoop-2.6.0 hadoop && \
     ln -s ./pig-0.15.0 pig && \
-    ln -s ./sqoop-1.4.6.bin__hadoop-2.0.4-alpha sqoop
+    ln -s ./sqoop-1.4.6.bin__hadoop-2.0.4-alpha sqoop && \
+    ln -s ./apache-hive-2.3.2-bin hive
 
 
 ###############################################################################
@@ -70,7 +72,9 @@ ENV YARN_CONF_DIR /opt/hadoop/etc/hadoop
 ENV YARN_HOME /opt/hadoop
 ENV SQOOP_HOME /opt/sqoop
 ENV PIG_HOME /opt/pig
-ENV PATH ${PATH}:${PIG_HOME}/bin:${SQOOP_HOME}/bin:${HADOOP_HOME}/bin
+ENV HIVE_CONF_DIR /opt/hive/conf
+ENV HIVE_HOME /opt/hive
+ENV PATH ${PATH}:${PIG_HOME}/bin:${SQOOP_HOME}/bin:${HADOOP_HOME}/bin:${HIVE_HOME}/bin
 
 ADD hadoop-shell /bin/hadoop-shell
 RUN chmod a+x /bin/hadoop-shell

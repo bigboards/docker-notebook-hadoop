@@ -13,6 +13,8 @@ export YARN_CONF_DIR=/opt/hadoop/etc/hadoop
 export YARN_HOME=/opt/hadoop
 export SQOOP_HOME=/opt/sqoop
 export PIG_HOME=/opt/pig
-export PATH=${PATH}:${PIG_HOME}/bin:${SQOOP_HOME}/bin:${HADOOP_HOME}/bin
+export HIVE_CONF_DIR=/opt/hive/conf
+export HIVE_HOME=/opt/hive
+export PATH=${PATH}:${PIG_HOME}/bin:${SQOOP_HOME}/bin:${HADOOP_HOME}/bin:${HIVE_HOME}/bin
 
 /bin/bash
